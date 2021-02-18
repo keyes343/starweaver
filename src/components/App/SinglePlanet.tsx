@@ -4,7 +4,7 @@ import { t,c } from '../index';
 
 import { useParams, Route, Switch } from 'react-router-dom';
 
-import { Residents, Films } from './SinglePlanet/index';
+import { Residents, Films, PlanetDetails } from './SinglePlanet/index';
 
 export interface SinglePlanetProps {
     
@@ -32,6 +32,11 @@ const SinglePlanet: React.FC<SinglePlanetProps> = () => {
     return ( 
         <div>
             <Switch>
+                <Route exact path={`/${params.planet}`} >
+                    {
+                        selectedPlanet && <PlanetDetails planet={selectedPlanet} />
+                    }
+                </Route>
                 <Route exact path={`/${params.planet}/films`} >
                     {
                         selectedPlanet && <Films planet={selectedPlanet} />

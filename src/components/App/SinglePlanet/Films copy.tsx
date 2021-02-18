@@ -47,7 +47,7 @@ const Films: React.FC<FilmsProps> = ({planet}:FilmsProps) => {
             planetName:{
                 fontSize: '2rem',
                 padding:'2rem',
-                border:'2px solid red'
+                // border:'2px solid red'
             },
             grid_wrapper: {
                 overflow: "hidden",

@@ -31,7 +31,9 @@ const Planets: React.FC<PlanetsProps> = () => {
         'gravity',
         'terrain',
         'surface_water',
-        'population'
+        'population',
+        'residents',
+        'films'
       ]
       const data_ : t.data = {
         values: ctx.allPlanets,
@@ -40,16 +42,23 @@ const Planets: React.FC<PlanetsProps> = () => {
           {
             label: 'Go to Films',
             action: (row:t.planet) => { 
-              console.log({row});
+              // console.log({row});
               history.push(`/${row.name}/films`);
-              console.log(`redirect to grid with ${row.films.length} Films`)
+              // console.log(`redirect to grid with ${row.films.length} Films`)
           }
           },
           {
             label: 'Go to Residents',
             action: (row:t.planet) => { 
               history.push(`/${row.name}/residents`);
-              console.log(`redirect to grid with ${row.residents.length} Residents`)
+              // console.log(`redirect to grid with ${row.residents.length} Residents`)
+            }
+          },
+          {
+            label: 'Planet Details',
+            action: (row:t.planet) => { 
+              history.push(`/${row.name}`);
+              // console.log(`redirect to grid with ${row.residents.length} Residents`)
             }
           }
         ]

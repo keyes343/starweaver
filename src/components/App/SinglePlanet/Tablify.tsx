@@ -38,11 +38,11 @@ const Tablify: React.FC<TablifyProps> = (props:TablifyProps) => {
                 height:'auto', width:'auto',
             },
             leftbox:{
-                border: '2px solid blue',
+                // border: '2px solid blue',
                 padding: '2rem',
             },
             rightbox:{
-                border: '2px solid green',
+                // border: '2px solid green',
                 padding: '2rem',
             },
 
@@ -97,18 +97,6 @@ const Tablify: React.FC<TablifyProps> = (props:TablifyProps) => {
     const datify = (obj:UnitedProperties,key:string) => {
         const focusKeys = ['created','edited'];
         if(t.hasKey(obj,key)){
-            // if(planetProperty && t.hasKey(planetProperty,key)){
-            //     return(
-            //         <div key={`${Math.random()}`} style={{...style.datacell, border:'2px solid green' }}  >
-            //             {
-            //                 `
-            //                 ${t.hasKey(planetProperty,key) && new Date(planetProperty[key] as any).getFullYear()}-${new Date(planetProperty[key] as any).getMonth()}-${new Date(planetProperty[key] as any).getDate()}                                          
-            //                 ` 
-            //             }
-            //             date
-            //         </div>
-            //     )
-            // }
 
             return(
                 <div key={`${Math.random()}`} style={{...style.datacell }}  >
@@ -119,26 +107,6 @@ const Tablify: React.FC<TablifyProps> = (props:TablifyProps) => {
                     }
                 </div>
             )
-
-            
-            // return focusKeys.map((key,i)=>{
-            //     if(planetProperty && t.hasKey(planetProperty,key)){
-            //         return(
-            //             <div key={`${i}`} style={{...style.datacell, border:'2px solid green' }}  >
-            //                 {/* {
-            //                     `
-            //                     ${new Date(planetProperty[key] as number).getFullYear()}-${new Date(planetProperty[key] as number).getMonth()}-${new Date(planetProperty[key] as number).getDate()}                                          
-            //                     ` 
-            //                 } */}
-            //                 date
-            //             </div>
-            //         )
-            //     }else return (
-            //         <div style={{height:"2rem", width:'2rem', border:'2px solid red'}} >
-            //             {key}
-            //         </div>
-            //     )
-            // })
         }
     }
 
